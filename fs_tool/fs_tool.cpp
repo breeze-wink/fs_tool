@@ -37,7 +37,7 @@ void FsTool::recursive_backup_files(const fs::path& source, const fs::path& back
     }
 }
 
-void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::string extention)
+void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::unordered_set<std::string> extentions)
 {
     auto now = fs::file_time_type::clock::now();
     for(const auto& entry : fs::directory_iterator(dir))
@@ -48,7 +48,7 @@ void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::str
             auto ftime = fs::last_write_time(entry);
             if (now - ftime > std::chrono::hours(24 * day_before))
             {
-                if (extention.empty() || entry.path().extension() == extention)
+                if (extentions.empty() || extentions.count(entry.path().extension().string()))
                 {
                     fs::remove(entry);
                     std::cout << "Removing : " << entry.path() << std::endl;
@@ -56,4 +56,9 @@ void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::str
             }
         }
     }
+}
+
+void FsTool::clean_old_files(const fs::path& dir, const int day_before)
+{
+    clean_old_files(dir, day_before, std::unordered_set<std::string>());
 }
