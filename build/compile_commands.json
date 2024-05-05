@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/breeze/exercise/use_filesystem/build",
+  "command": "/usr/bin/clang++-15 -g -std=gnu++17 -o CMakeFiles/filesystem.dir/main.cpp.o -c /home/breeze/exercise/use_filesystem/main.cpp",
+  "file": "/home/breeze/exercise/use_filesystem/main.cpp"
+}
+]
