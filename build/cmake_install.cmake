@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/breeze/exercise/fs_tool/build/test/backup_files/cmake_install.cmake")
+  include("/home/breeze/exercise/fs_tool/build/test/clean_old_files/cmake_install.cmake")
 
 endif()
 

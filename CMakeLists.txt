@@ -18,5 +18,6 @@ enable_testing()
 add_library(fs_tool SHARED ./fs_tool/fs_tool.cpp)
 
 add_subdirectory(test/backup_files)
+add_subdirectory(test/clean_old_files)
 
 target_include_directories(fs_tool PUBLIC ./fs_tool)

@@ -1,4 +1,6 @@
 #include "fs_tool.h"
+#include <chrono>
+#include <iostream>
 #include <filesystem>
 
 using namespace breeze::fs_tool;
@@ -24,13 +26,34 @@ void FsTool::recursive_backup_files(const fs::path& source, const fs::path& back
     for (const auto& entry : fs::recursive_directory_iterator(source))
     {
         //构建相对路径
-        auto relative_path = fs::relative(entry, source);
+        auto relative_entry = fs::relative(entry, source);
 
-        fs::path dest = backup_dir / relative_path;
+        fs::path dest = backup_dir / relative_entry;
 
         fs::create_directories(dest.parent_path()); //用来确保目标父目录存在
 
         fs::copy(entry, dest, fs::copy_options::update_existing);
 
+    }
+}
+
+void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::string extention)
+{
+    auto now = fs::file_time_type::clock::now();
+    for(const auto& entry : fs::directory_iterator(dir))
+    {
+        
+        if (fs::is_regular_file(entry.status()))
+        {
+            auto ftime = fs::last_write_time(entry);
+            if (now - ftime > std::chrono::hours(24 * day_before))
+            {
+                if (extention.empty() || entry.path().extension() == extention)
+                {
+                    fs::remove(entry);
+                    std::cout << "Removing : " << entry.path() << std::endl;
+                }
+            }
+        }
     }
 }

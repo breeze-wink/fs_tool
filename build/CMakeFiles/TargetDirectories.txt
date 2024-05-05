@@ -6,3 +6,7 @@
 /home/breeze/exercise/fs_tool/build/test/backup_files/CMakeFiles/test.dir
 /home/breeze/exercise/fs_tool/build/test/backup_files/CMakeFiles/edit_cache.dir
 /home/breeze/exercise/fs_tool/build/test/backup_files/CMakeFiles/rebuild_cache.dir
+/home/breeze/exercise/fs_tool/build/test/clean_old_files/CMakeFiles/clean_test.dir
+/home/breeze/exercise/fs_tool/build/test/clean_old_files/CMakeFiles/test.dir
+/home/breeze/exercise/fs_tool/build/test/clean_old_files/CMakeFiles/edit_cache.dir
+/home/breeze/exercise/fs_tool/build/test/clean_old_files/CMakeFiles/rebuild_cache.dir
