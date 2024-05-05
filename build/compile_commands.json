@@ -1,7 +1,12 @@
 [
 {
-  "directory": "/home/breeze/exercise/use_filesystem/build",
-  "command": "/usr/bin/clang++-15 -g -std=gnu++17 -o CMakeFiles/filesystem.dir/main.cpp.o -c /home/breeze/exercise/use_filesystem/main.cpp",
-  "file": "/home/breeze/exercise/use_filesystem/main.cpp"
+  "directory": "/home/breeze/exercise/fs_tool/build",
+  "command": "/usr/bin/clang++-15 -Dfs_tool_EXPORTS -I/home/breeze/exercise/fs_tool/./fs_tool -g -fPIC -std=gnu++17 -o CMakeFiles/fs_tool.dir/fs_tool/fs_tool.cpp.o -c /home/breeze/exercise/fs_tool/fs_tool/fs_tool.cpp",
+  "file": "/home/breeze/exercise/fs_tool/fs_tool/fs_tool.cpp"
+},
+{
+  "directory": "/home/breeze/exercise/fs_tool/build",
+  "command": "/usr/bin/clang++-15 -I/home/breeze/exercise/fs_tool/fs_tool -I/home/breeze/exercise/fs_tool/./fs_tool -g -std=gnu++17 -o test/backup_files/CMakeFiles/backup_test.dir/backup_test.cpp.o -c /home/breeze/exercise/fs_tool/test/backup_files/backup_test.cpp",
+  "file": "/home/breeze/exercise/fs_tool/test/backup_files/backup_test.cpp"
 }
 ]

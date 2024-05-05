@@ -8,6 +8,15 @@ project(fs-tool
 )
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set(src ${PROJECT_SOURCE_DIR}/fs_tool)
+
 enable_testing()
 
+add_library(fs_tool SHARED ./fs_tool/fs_tool.cpp)
+
+add_subdirectory(test/backup_files)
+
+target_include_directories(fs_tool PUBLIC ./fs_tool)
