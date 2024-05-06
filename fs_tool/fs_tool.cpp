@@ -2,7 +2,9 @@
 #include <chrono>
 #include <iostream>
 #include <filesystem>
-
+#include <thread>
+#include <future>
+#include <vector>
 using namespace breeze::fs_tool;
 
 void FsTool::backup_files(const fs::path& source, const fs::path& backup_dir)
@@ -40,21 +42,30 @@ void FsTool::recursive_backup_files(const fs::path& source, const fs::path& back
 void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::unordered_set<std::string> extentions)
 {
     auto now = fs::file_time_type::clock::now();
+
+    std::vector<std::future<void>> futures;
+
     for(const auto& entry : fs::directory_iterator(dir))
-    {
-        
+    {       
         if (fs::is_regular_file(entry.status()))
         {
-            auto ftime = fs::last_write_time(entry);
-            if (now - ftime > std::chrono::hours(24 * day_before))
-            {
-                if (extentions.empty() || extentions.count(entry.path().extension().string()))
+            futures.emplace_back(std::async(std::launch::async, [&, entry]{
+                auto ftime = fs::last_write_time(entry);
+                if (now - ftime > std::chrono::hours(24 * day_before))
                 {
-                    fs::remove(entry);
-                    std::cout << "Removing : " << entry.path() << std::endl;
+                    if (extentions.empty() || extentions.count(entry.path().extension().string()))
+                    {
+                        fs::remove(entry);
+                        //add log
+                    }
                 }
-            }
+            }));
         }
+    }
+
+    for (auto& future : futures)
+    {
+        future.get();
     }
 }
 
