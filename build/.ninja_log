@@ -1,9 +1,13 @@
 # ninja log v5
 1	674	1714920553754924866	test/backup_files/CMakeFiles/backup_test.dir/__/__/fs_tool/fs_tool.cpp.o	7945cdfa46744900
-740	866	1714927850979388374	../lib/libfs_tool.so	7985a8c393a821ae
-2	640	1714927850751383984	test/backup_files/CMakeFiles/backup_test.dir/backup_test.cpp.o	9844a4b7202994ef
-866	976	1714927851087390453	../bin/backup_test	1e3379d8f9c7a582
-1	740	1714927850851385909	CMakeFiles/fs_tool.dir/fs_tool/fs_tool.cpp.o	9660ccdcb4870375
-866	987	1714927851099390683	../bin/clean_test	cb6cbb2b4b32a4de
+1402	1572	1715002294212834714	../lib/libfs_tool.so	7985a8c393a821ae
+2	837	1715002293472820496	test/backup_files/CMakeFiles/backup_test.dir/backup_test.cpp.o	9844a4b7202994ef
+1572	1721	1715002294360837558	../bin/backup_test	1e3379d8f9c7a582
+1	1402	1715002294032831256	CMakeFiles/fs_tool.dir/fs_tool/fs_tool.cpp.o	9660ccdcb4870375
+1573	1705	1715002294344837251	../bin/clean_test	cb6cbb2b4b32a4de
 699	753	1714922352929533698	../lib/libfs_tool.a	53c6f56ff69b64c1
-2	642	1714927850751383984	test/clean_old_files/CMakeFiles/clean_test.dir/clean_test.cpp.o	9b1d51838e48dfbd
+2	879	1715002293512821265	test/clean_old_files/CMakeFiles/clean_test.dir/clean_test.cpp.o	9b1d51838e48dfbd
+1	703	1715002587418469916	test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o	a3c1f8804289abdb
+703	821	1715002587538472223	../bin/calc_dir_size_test	e216f766f0671d98
+0	715	1715002611434931541	test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o	a3c1f8804289abdb
+715	827	1715002611546933693	../bin/calc_dir_size_test	e216f766f0671d98

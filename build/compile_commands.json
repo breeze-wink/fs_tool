@@ -13,5 +13,10 @@
   "directory": "/home/breeze/exercise/fs_tool/build",
   "command": "/usr/bin/clang++-15 -I/home/breeze/exercise/fs_tool/fs_tool -I/home/breeze/exercise/fs_tool/./fs_tool -g -std=gnu++17 -o test/clean_old_files/CMakeFiles/clean_test.dir/clean_test.cpp.o -c /home/breeze/exercise/fs_tool/test/clean_old_files/clean_test.cpp",
   "file": "/home/breeze/exercise/fs_tool/test/clean_old_files/clean_test.cpp"
+},
+{
+  "directory": "/home/breeze/exercise/fs_tool/build",
+  "command": "/usr/bin/clang++-15 -I/home/breeze/exercise/fs_tool/fs_tool -I/home/breeze/exercise/fs_tool/./fs_tool -g -std=gnu++17 -o test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o -c /home/breeze/exercise/fs_tool/test/calc_dir_size/calc_dir_size_test.cpp",
+  "file": "/home/breeze/exercise/fs_tool/test/calc_dir_size/calc_dir_size_test.cpp"
 }
 ]

@@ -1,5 +1,6 @@
 #include "fs_tool.h"
 #include <chrono>
+#include <cstdint>
 #include <iostream>
 #include <filesystem>
 #include <thread>
@@ -72,4 +73,33 @@ void FsTool::clean_old_files(const fs::path& dir, const int day_before, std::uno
 void FsTool::clean_old_files(const fs::path& dir, const int day_before)
 {
     clean_old_files(dir, day_before, std::unordered_set<std::string>());
+}
+
+std::uintmax_t FsTool::calculate_directory_size(const fs::path& dir, bool include_subdirs)
+{
+    std::uintmax_t size = 0;
+
+    if (include_subdirs)
+    {
+        for (const auto& entry : fs::recursive_directory_iterator(dir))
+        {
+            if (fs::is_regular_file(entry.status()))
+            {
+                size += fs::file_size(entry);
+            }
+        }
+    } 
+
+    else
+    {
+        for (const auto& entry : fs::directory_iterator(dir))
+        {
+            if (fs::is_regular_file(entry.status()))
+            {
+                size += fs::file_size(entry);
+            }
+        }
+    }
+
+    return size;
 }

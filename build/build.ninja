@@ -259,9 +259,85 @@ build test/clean_old_files/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build test/clean_old_files/rebuild_cache: phony test/clean_old_files/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/breeze/exercise/fs_tool/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target calc_dir_size_test
+
+
+#############################################
+# Order-only phony target for calc_dir_size_test
+
+build cmake_object_order_depends_target_calc_dir_size_test: phony || cmake_object_order_depends_target_fs_tool
+
+build test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o: CXX_COMPILER__calc_dir_size_test_Debug /home/breeze/exercise/fs_tool/test/calc_dir_size/calc_dir_size_test.cpp || cmake_object_order_depends_target_calc_dir_size_test
+  DEP_FILE = test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -I/home/breeze/exercise/fs_tool/fs_tool -I/home/breeze/exercise/fs_tool/./fs_tool
+  OBJECT_DIR = test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir
+  OBJECT_FILE_DIR = test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target calc_dir_size_test
+
+
+#############################################
+# Link the executable ../bin/calc_dir_size_test
+
+build ../bin/calc_dir_size_test: CXX_EXECUTABLE_LINKER__calc_dir_size_test_Debug test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir/calc_dir_size_test.cpp.o | ../lib/libfs_tool.so || ../lib/libfs_tool.so
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -Wl,-rpath,/home/breeze/exercise/fs_tool/lib  ../lib/libfs_tool.so
+  OBJECT_DIR = test/calc_dir_size/CMakeFiles/calc_dir_size_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = ../bin/calc_dir_size_test
+  TARGET_PDB = calc_dir_size_test.dbg
+
+
+#############################################
+# Utility command for test
+
+build test/calc_dir_size/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/fs_tool/build/test/calc_dir_size && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test/calc_dir_size/test: phony test/calc_dir_size/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/calc_dir_size/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/fs_tool/build/test/calc_dir_size && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test/calc_dir_size/edit_cache: phony test/calc_dir_size/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/calc_dir_size/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/breeze/exercise/fs_tool/build/test/calc_dir_size && /usr/bin/cmake --regenerate-during-build -S/home/breeze/exercise/fs_tool -B/home/breeze/exercise/fs_tool/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/calc_dir_size/rebuild_cache: phony test/calc_dir_size/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
 
 build backup_test: phony ../bin/backup_test
+
+build calc_dir_size_test: phony ../bin/calc_dir_size_test
 
 build clean_test: phony ../bin/clean_test
 
@@ -277,7 +353,7 @@ build libfs_tool.so: phony ../lib/libfs_tool.so
 #############################################
 # Folder: /home/breeze/exercise/fs_tool/build
 
-build all: phony ../lib/libfs_tool.so test/backup_files/all test/clean_old_files/all
+build all: phony ../lib/libfs_tool.so test/backup_files/all test/clean_old_files/all test/calc_dir_size/all
 
 # =============================================================================
 
@@ -285,6 +361,13 @@ build all: phony ../lib/libfs_tool.so test/backup_files/all test/clean_old_files
 # Folder: /home/breeze/exercise/fs_tool/build/test/backup_files
 
 build test/backup_files/all: phony ../bin/backup_test
+
+# =============================================================================
+
+#############################################
+# Folder: /home/breeze/exercise/fs_tool/build/test/calc_dir_size
+
+build test/calc_dir_size/all: phony ../bin/calc_dir_size_test
 
 # =============================================================================
 
@@ -305,14 +388,14 @@ build test/clean_old_files/all: phony ../bin/clean_test
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../test/backup_files/CMakeLists.txt ../test/clean_old_files/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../test/backup_files/CMakeLists.txt ../test/calc_dir_size/CMakeLists.txt ../test/clean_old_files/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../test/backup_files/CMakeLists.txt ../test/clean_old_files/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../test/backup_files/CMakeLists.txt ../test/calc_dir_size/CMakeLists.txt ../test/clean_old_files/CMakeLists.txt /usr/share/cmake-3.22/Modules/CMakeCInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-C.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

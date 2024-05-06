@@ -226,6 +226,24 @@ backup_test_IS_TOP_LEVEL:STATIC=OFF
 backup_test_SOURCE_DIR:STATIC=/home/breeze/exercise/fs_tool/test/backup_files
 
 //Value Computed by CMake
+calc_BINARY_DIR:STATIC=/home/breeze/exercise/fs_tool/build/test/calc_dir_size
+
+//Value Computed by CMake
+calc_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+calc_SOURCE_DIR:STATIC=/home/breeze/exercise/fs_tool/test/calc_dir_size
+
+//Value Computed by CMake
+calc_dir_size_test_BINARY_DIR:STATIC=/home/breeze/exercise/fs_tool/build/test/calc_dir_size
+
+//Value Computed by CMake
+calc_dir_size_test_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+calc_dir_size_test_SOURCE_DIR:STATIC=/home/breeze/exercise/fs_tool/test/calc_dir_size
+
+//Value Computed by CMake
 clean_test_BINARY_DIR:STATIC=/home/breeze/exercise/fs_tool/build/test/clean_old_files
 
 //Value Computed by CMake
@@ -344,7 +362,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
